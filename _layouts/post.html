@@ -1,0 +1,22 @@
+---
+layout: container
+---
+<article>
+  <header>
+    <h2 class="mt-4 mb-4">{{ page.title }}</h2>
+  </header>
+  <div class="card border-primary mb-3 bg-dark">
+    <div class="card-body">
+      <div class="card-text">{{ content }}</div>
+      <footer>
+        <p>
+          Posted on <b><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time></b><br>
+          {% if page.author %}Authored by <b>{{ page.author }}</b>{% endif %}
+        </p>
+        <p> {% assign blogPage = site.pages | where: "title", "Blog" | first %}
+          <a href="{{ blogPage.url }}">Back to Blog</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+</article>

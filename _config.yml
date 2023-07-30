@@ -1,0 +1,20 @@
+# Site settings
+title: jbales.dev
+email: hello@jbales.dev
+baseurl: ""
+url: "https://jbales.dev"
+exclude:
+  - README.md
+  - LICENSE
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title:output_ext
+paginate: 5
+paginate_path: "/blog/:num/"
+
+# Feed
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
